@@ -1,360 +1,489 @@
-//..........................Q1...................//
-// var i=prompt("Enter your name ");
-// alert("hi ," +i);
-
-//.........................Q2........................//
-
-// var table=prompt("Enter your Table");
-// var t=1;
-// document.write(table+'x 1 = '+table *t++ +'<br></br>' );
-// document.write(table+'x 2 = '+table *t++ +'<br></br>');
-// document.write(table+'x 3 = '+table *t++ +'<br></br>');
-// document.write(table+'x 4 = '+table *t++ +'<br></br>');
-// document.write(table+'x 5 = '+table *t++ +'<br></br>');
-// document.write(table+'x 6 = '+table *t++ +'<br></br>');
-// document.write(table+'x 7 = '+table *t++ +'<br></br>');
-// document.write(table+'x 8 = '+table *t++ +'<br></br>');
-// document.write(table+'x 9 = '+table *t++ +'<br></br>');
-// document.write(table+'x 10 = '+table *t++ +'<br></br>');
-
-
-
-//....................Q3........................./
-// var i=prompt("please enter your city");
-// if(i=="karachi"){
-//     alert("welcome to the city of light");
-// }
-//....................Q4.................//
-
-// var i=prompt("please enter your gender");
-// if(i=="male"){
-//     alert("Good Morning sir");
-// }
-// else{
-//     alert("Good Morning Mam")
-// }
-//.....................Q5....................//
-
-// var i=prompt("please enter your gender");
-// if(i=="red"){
-//     alert("vehicles must stop");
-// }
-// else if (i=="yellow"){
-//     alert("vehicles should get ready to move")
-// }
-// else if (i=="green"){
-//     alert("vehicles can move now")
-// }
-// else{
-//     alert("invalid input")
+// let number = 9;
+// let array = [10, 20, 20, 10, 10, 30, 50, 10, 20];
+// function question1(n, a) {
+//     let counts = {}
+//     let temp = 0;
+//     for (let i = 0; i < a.length; i++) {
+//         if (counts[a[i]]) {
+//             counts[a[i]] += 1
+//         } else {
+//             counts[a[i]] = 1
+//         }
+//     }
+//     let val = Object.entries(counts);
+//     for (var j = 0; j < val.length; j++) {
+//         if (val[j][1] / 2) {
+//             let a = Math.floor(val[j][1] / 2);
+//             temp += a;;
+//         }
+//     }
+//     return temp
 // }
 
-//................................Q6................//
-// var age=prompt("Enter your age current age")
-// var maxage=72;
-// if(age<maxage){
-// alert("the current age is less then max age and you are well Come")
+// var answer1 = question(number, array)
+// console.log("answer", answer1)
+
+
+
+
+
+// Question 2
+// let arr = [
+//     [1, 1, 1, 0, 0, 0],
+//     [0, 1, 0, 0, 0, 0],
+//     [1, 1, 1, 0, 0, 0],
+//     [0, 0, 2, 4, 4, 0],
+//     [0, 0, 0, 2, 0, 0],
+//     [0, 0, 1, 2, 4, 0]
+// ]
+// function question2(arr) {
+//     let count = -63;
+//     for (let i = 0; i <= 3; i++) {
+//         for (let j = 0; j <= 3; j++) {
+//             let sum = arr[i][j] + arr[i][j + 1] + arr[i][j + 2] + arr[i + 1][j + 1]+ arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2]
+//             console.log("sum",sum)
+//             console.log("count",count)
+//             if (sum > count) {
+//                 count = sum
+//             }
+//         }
+//     }
+//     return count;
 // }
-// else if(age>maxage){
-//     alert("The current age is grater then max age")
+// var answer2 = question2(arr);
+// console.log("answer2", answer2)
+
+
+
+
+
+// question 3
+// let a = [1, 2, 3, 4, 5];
+// let d = 4;
+// function question3(a, d) {
+//     console.log("a", a)
+//     console.log("d", d)
+//    let arr = a;
+//     for (let i = 0; i < a.length; i++) {
+//         if (i < d) {
+//             let b=arr.splice(0,1);
+//             arr.push(b[0])
+
+//         }
+//     }
+//     return arr
 // }
-// else{
-//     alert("invalid age")
+// var answer3 = question3(a, d);
+// console.log("answer3", answer3)
+
+
+
+
+
+
+
+//Question 4 Start 
+
+// let steps = 8;
+// let path = ['U', 'D', 'D', 'D', 'U', 'D', 'U', 'U'];
+// function question4(st, pa) {
+//     let a = Array.from(pa);
+//     let valleys = 0;
+//     let pos = 0;
+//     let prevpos = 0;
+//     for (let i = 0; i < a.length; i++) {
+//         if (a[i] === 'U') {
+//             prevpos = pos++;
+//             if (pos === 0) {
+//                 valleys++;
+//             }
+//         }
+//         else {
+//             prevpos = pos--;
+//         }
+//     }
+
+//     return valleys;
 // }
+// var answer4 = question4(steps, path);
+// console.log("answer4", answer4);
 
-//...............................Q7......................//
 
-// var i=prompt( "input remaining fuel in car ");
-// if (i<=0.25)
-// {
-//     alert("Please refill the fuel in your car")
-// }
 
-//.........................Q8...................//
 
-//  var a = 4;
-// if (++a === 5){
-//  alert("given condition for variable a is true");                   //True//
-// }
 
-// var b = 82;
-// if (b++ === 83){
-//  alert("given condition for variable b is true");                //False//
-// }
 
-// var c = 12;
-// if (c++ === 13){
-//  alert("condition 1 is true");
-// }
-// if (c === 13){
-//  alert("condition 2 is true");                 //False//
-// }
-// if (++c < 14){
-//  alert("condition 3 is true");
-// }
-// if(c === 14){
-//  alert("condition 4 is true");
-// }
 
-// var materialCost = 20000;
-// var laborCost = 2000;
-// var totalCost = materialCost + laborCost;               //True//
-// if (totalCost === laborCost + materialCost){
-//  alert("The cost equals");
-// }
+//Question 5 //
 
-// if (true){
-//  alert("True");
-// }                                    //True//
-// if (false){
-//  alert("False");
-// }
-
-// if("car" < "cat"){
-//  alert("car is smaller than cat");                    //True//
-// }
-//........................Q9...............//
-
-// var totalMarks = 300;
-// var HTML5Marks = +prompt("HTML5 Marks");
-// var Css3Marks = +prompt("Css Marks");
-// var JSMarks = +prompt("Javascript Marks");
-
-// var obtMarks = HTML5Marks + Css3Marks + JSMarks;
-
-// var percentage = (obtMarks * 100) / totalMarks;
-
-// var remarks;
-// var grade;
-
-// if (percentage >= 80) {
-
-//     remarks = "Excellent";
-//     grade = "A-One";
-// } else if (percentage >= 70) {
-
-//     remarks = "Good";
-//     grade = "A";
-// } else if (percentage >= 60) {
-//     remarks = "You Need To Improve";
-//     grade = "B";
-// } else if (percentage < 60) {
-
-//     remarks = "Sorry";
-//     grade = "Fail";
-// } else {
-//     console.log("Invalid Input");
-// }
-
-// document.write("<h1> Marks Sheet </h1> <br><br>Total Marks : " + totalMarks +
-//     "<br>  Obtained Marks : " + obtMarks +
-//     "<br> Percentage : " + percentage +
-//     "<br> Grade : " + grade +
-//     "<br> Remarks : " + remarks);
-
-//............................Q10..........................
-// var NameofItem1 = prompt("Name of Item 1");
-// var Item1Price = +prompt("Item 1 Price");
-// var QuantityofItem1 = +prompt("Quantity of Item 1");
-// var NameofItem2 = prompt("Name of Item 2");
-// var Item2Price = +prompt("Item 2 Price");
-// var QuantityofItem2 = +prompt("Quantity of Item 2");
-
-// var ShippingChareges = 25
-
-// var totalcost = (Item1Price * QuantityofItem1) + (Item2Price * QuantityofItem2);
-// var discount;
-
-// if (totalcost > 2000) {
-//     discount = (totalcost * 10) / 100;
-
+// let c = [0, 0, 1, 0, 0, 1, 0];
+// function question5(c) {
+//     let jumps = 0;
+//     let pos = 0;
+//     for (var i = 0; i < c.length; i++) {
+//         if (c[pos + 2] == 0) {
+//             pos = pos + 2
+//             jumps++
+//         }
+//         else if (c[pos + 1] == 0) {
+//             pos = pos + 1;
+//             jumps++
+//         }
+//         else {
+//             break;
+//         }
+//     }
+//     return jumps
 
 // }
-// document.write("<h1> Shopping Cart <br><br></h1>" +
-//     "Name of Item 1 : " + NameofItem1 +
-//     "<br>Price of Item 1 : " + Item1Price +
-//     "<br>Name of Item 2 : " + NameofItem2 +
-//     "<br>Price of Item 2 :" + Item2Price +
-//     "<br> Shipping Charges :" + ShippingChareges +
-//     "<br>Total Cost of your Order is : " + totalcost +
-//     "PKR<br> discount Price : " + discount + "PKR");
+// var answer5 = question5(c);
+// console.log("answer5", answer5);
 
-//.................................Q11........................
 
-// var secretnumber = 5;
-// var guessnumber = +prompt("Guess the Number");
-// if (guessnumber === secretnumber) {
-//     document.write("yes your answese is correct<br>" +
-//         "secretnumber is :5<br>" +
-//         "guess number is : " + guessnumber);
-// } else if (guessnumber === --secretnumber || guessnumber === 6) {
-//     document.write("Close Enough To The Correct Answer");
-// } else {
-//     document.write("Try Again");
+
+
+
+
+
+// let s = 'aba'
+// let n = 10;
+// function question6(s, n) {
+
+//     const as = s.split("").filter(c => c === "a").length;
+//     const times = parseInt(n / s.length);
+//     const rest = n % s.length;
+
+//     const totalAs = times * as
+//         + s.slice(0, rest).split("").filter(c => c === "a").length
+
+//     return totalAs;
+
+// }
+// var answer6 = question6(s, n);
+// console.log("answer6", answer6)
+
+
+
+
+
+
+
+// Array Manipulation
+// let n = 10;
+// let arr = [
+//     [1, 5, 3],
+//     [4, 8, 7],
+//     [6, 9, 1],
+// ]
+
+// function question7(n, queries) {
+//     let arr = new Array(n + 1).fill(0);
+//     queries.forEach(([a, b, k]) => {
+//         arr[a - 1] += k;
+//         arr[b] -= k;
+//     })
+//     let sum = 0;
+//     let max = 0;
+//     arr.forEach(val => {
+//         sum += val;
+//         max = Math.max(sum, max)
+//     })
+//     return max;
+// }
+// var answer7 = question7(n, arr);
+// console.log("answer7", answer7);
+
+
+
+
+
+
+
+
+//Minimum Swaps 2
+// let arr = [2, 3, 4, 1, 5];
+// function question8(arr) {
+//     let swaps = 0;
+
+//     const tmp = {};
+//     arr.forEach((v, i) => tmp[v] = i);;
+//     arr.forEach((v, i) => {
+//         if (arr[i] !== i + 1) {
+//             swaps += 1
+//             const t = arr[i]
+//             arr[i] = i + 1
+//             arr[tmp[i + 1]] = t
+
+//             tmp[t] = tmp[i + 1]
+//         }
+//     });
+
+//     return swaps
+// }
+// var answer8 = question8(arr);
+// console.log("answer8", answer8);
+
+
+
+
+
+
+
+
+// Maximum Toys 
+// let k = 50;
+// let prices = [1, 12, 5, 111, 200, 1000, 10]
+
+// function question9(k, prices) {
+//     let temp = prices.sort((a, b) => a - b);
+//     console.log("temp", temp)
+//     let count = 0;
+//     temp.forEach(price => {
+
+//         if (k > price) { // if true
+//             k = k - price;
+//             count++;
+//         }
+//     });
+
+//     // returning the number of toys that I can buy
+//     return count;
+// }
+// let answer9 = question9(k, prices);
+// console.log("answer9", answer9);
+
+
+
+
+
+
+
+
+// Merge Sort: Counting Inversions
+// let arr = [2, 1, 3, 1, 2]
+// function question10(arr) {
+//     return sortAndCount(arr);
 // }
 
+// let sortAndCount = arr => {
+//     if (arr.length < 2) {
+//         return 0;
+//     }
 
-//.........................Q12.....................
+//     var mid = Math.floor(arr.length / 2);
+//     var left = arr.slice(0, mid);
+//     var right = arr.slice(mid);
 
-// var number = +prompt("Enter Your Number");
-// if (number % 3 === 0) {
-//     document.write("Your Number is : " + number +
-//         "<br> and is  Divisible by 3");
-// } else {
-//     document.write("No your number is not Divisible by 3");
+//     return sortAndCount(left) + sortAndCount(right) + mergeSortAndCount(arr, left, right);
 // }
 
+// let mergeSortAndCount = (arr, left, right) => {
+//     var i = 0, leftIndex = 0, rightIndex = 0, inversions = 0;
+
+//     while (leftIndex < left.length && rightIndex < right.length) {
+//         if (left[leftIndex] <= right[rightIndex]) {
+//             arr[i] = left[leftIndex];
+//             leftIndex++;
+//         } else {
+//             arr[i] = right[rightIndex];
+//             rightIndex++;
+//             inversions += (left.length - leftIndex);
+//         }
+
+//         i++;
+//     }
+
+//     while (leftIndex < left.length) {
+//         arr[i] = left[leftIndex];
+//         leftIndex++;
+//         i++;
+//     }
+
+//     while (rightIndex < right.length) {
+//         arr[i] = right[rightIndex];
+//         rightIndex++;
+//         i++;
+//     }
+
+//     return inversions;
+// }
+// let answer10 = question10(arr);
+// console.log("answer10", answer10);
 
 
-//.........................Q13.............................
 
-// var team1 = prompt("Enter Team1 Name ");
-// var scoreTeam1 = +prompt("Enter Score Of Team " + team1);
-// var team2 = prompt("Enter Team2 Name ");
-// var scoreTeam2 = +prompt("Enter Score Of Team " + team2);
 
-// if (scoreTeam1 > scoreTeam2) {
-//     alert(team1 + " Has Won The Match");
-// } else if (scoreTeam1 < scoreTeam2) {
-//     alert(team2 + " Has Won The Match");
-// } else if (scoreTeam1 === scoreTeam2) {
-//     alert("Match Has Been Tied Between " + team1 + " And " + team2);
+// let expenditures = [2, 3, 4, 2, 3, 6, 8, 4, 5]
+// let d = 5;
+
+// function question11(expenditure, d) {
+//     // Write your code here
+//     let map = {}
+//     let count = 0
+//     let list = []
+//     const p = d % 2 === 0 ? d / 2 + 1 : (d + 1) / 2
+
+//     expenditure.slice(0, d).forEach((i) => {
+//         if (!map[i]) map[i] = 0
+//         map[i]++
+//     })
+
+//     for (let i = 0; expenditure.length - d > i; i++) {
+//         if (i !== 0) {
+//             map = updateMap(map, expenditure[i - 1], expenditure[i + d - 1])
+//         }
+//         const m = getMedian(map, d, p)
+//         const s = expenditure[i + d]
+
+//         if (s >= m * 2) count++
+//     }
+
+//     return count
+// }
+// function updateMap(map, l, n) {
+//     map[l]--
+//     if (!map[l]) delete map[l]
+
+//     if (!map[n]) map[n] = 0
+//     map[n]++
+
+//     return map
 // }
 
-//.........................Q14..........................
+// function getMedian(map, d, p) {
+//     let index = 0
+//     const keys = Object.keys(map)
+//     let a = 0
+//     let b = 0
+//     while (p > 0) {
+//         const key = keys[index]
+//         p -= map[key]
+//         if (1 > p) {
+//             a = key
+//         }
+//         if (!b && 2 > p) {
+//             b = key
+//         }
+//         index += 1
+//     }
 
-// var String = "Pakistan";
-// var integer = 12;
-// var boolean = true;
-
-// alert("pakitan has string");
-// alert(" 12 is Integer");
-// alert("ture is Boolean");
-
-
-//............................Q15.............................
-
-// var number = +prompt("Enter number");
-// if (number % 2 == 0) {
-//     alert("The given number of : " + number + " is even");
-// } else {
-//     alert("The given number of : " + number + " is odd");
+//     if (d % 2 === 0) {
+//         return (Number(a) + Number(b)) / 2
+//     } else {
+//         return a
+//     }
 // }
+// let answer11 = question11(expenditures, d);
+// console.log("answer11", answer11);
 
 
-//.........................Q16...........................
 
-// var Temperature = +prompt("Enter Temperature");
 
-// if (Temperature > 40) {
-//     alert("It is too hot outside")
-// } else if (Temperature > 30) {
-//     alert("The Weather today is Normal");
-// } else if (Temperature > 20) {
-//     alert("Today’s Weather is cool.");
 
-// } else {
-//     alert("OMG! Today’s weather is so Cool.");
+
+
+
+// Alternating Characters
+// let s = "BABABA"
+// function question12(s) {
+//     let count = 0;
+//     for (let i = 0; i < s.length - 1; i++) {
+//         if (s.charAt(i) == s.charAt(i + 1)) {
+//             count++;
+//         }
+
+//     }
+
+//     return count
 // }
+// let answer12 = question12(s);
+// console.log("asnwer12", answer12);
 
 
 
-//.........................Q17......................
-// var num1 = +prompt("enter First number ")
-// var num2 = +prompt("enter Second Number ");
-// var operation = prompt("Enter Operation i.e + , - , * , / , %");
-// var add = (num1 + num2);
-// var sub = (num1 - num2);
-// var mul = (num1 * num2);
-// var div = (num1 / num2);
-// var per = (num1 * num2 / 100);
 
-// if (operation === "+") {
-//     alert("addition of two number is " + add);
-// } else if (operation === "-") {
-//     alert("Subtraction of two number is : " + sub);
-// } else if (operation === "*") {
-//     alert("Multiply of two number is : " + mul);
-// } else if (operation === "-") {
-//     alert("Division of two number is : " + div);
-// } else if (operation === "%") {
-//     alert("Percentage of two number is : " + per);
+
+
+
+// Sherlock and the Valid String
+
+// let s = "aabbcd";
+// function question13(s) {
+//     let hash = {};
+//   let max, min;
+//   let minCount = 0;
+//   let maxCount = 0;
+//   for (let i = 0; i < s.length; i++) {
+//     let key = s[i];
+//     if (hash[key]) {
+//       hash[key]++;
+//     } else {
+//       hash[key] = 1;
+//     }
+//   }
+//   let frequencies = [];
+//   for (let key in hash) {
+//     frequencies.push (hash[key]);
+//   }
+//   frequencies.sort ();
+//   min = frequencies[0];
+//   max = frequencies[frequencies.length - 1];
+//   for (let i = 0; i < frequencies.length; i++) {
+//     if (frequencies[i] === max) {
+//       maxCount++;
+//     }
+//     if (frequencies[i] === min) {
+//       minCount++;
+//     }
+//   }
+//   if (min === max) {
+//     return 'YES';
+//   }
+//   if (max - (min - 1) == max && minCount === 1 && maxCount !== 1) {
+//     return 'YES';
+//   }
+//   if (max - min !== 1) {
+//     return 'NO';
+//   }
+//   if (maxCount === minCount) {
+//     return 'NO';
+//   }
+//   if (maxCount === 1 || minCount === 1) {
+//     return 'YES';
+//   }
+
+//   return 'NO';
 // }
+// let answer13 = question13(13);
+// console.log("answer13", answer13);
 
 
 
-//..............................Q18.................................
 
-// var days = prompt("Enter day")
 
-// if (days === "Monday" || days === "Tuesday" || days === "Wednesday" || days === "Thrusday" || days === "Friday") {
-//     alert("It's A Week Day");
-// } else if (days === "Saturday") {
-//     alert("It’s weekend");
-// } else if (days === "sunday") {
-//     alert("it's a holiday");
+
+
+// let n = 5;
+// let s = "asasd"
+// function question15(n, s) {
+//     let count = 0
+//     let temp = ''
+
+//     for (let i = 0; i < n; ++i) {
+//         if (!temp || temp[0] === s[i]) {
+//             temp += s[i]
+//         } else {
+//             let j = 1
+//             while (j <= temp.length && s[i + j] === temp[0]) {
+//                 ++j
+//                 ++count
+//             }
+//             temp = s[i]
+//         }
+//         count += temp.length
+//     }
+
+//     return count
 // }
-
-//..........................Q19..........................
-
-// var score = +prompt("Enter Score ");
-
-// if (score > 50) {
-//     alert("You Are Passed");
-// } else {
-//     alert("Sorry you are failed");
-// }
-
-
-//...........................Q20..........................
-
-// var Num1 = +prompt("Enter First Number To Compare");
-// var Num2 = +prompt("Enter Second Number To Compare");
-
-// if (Num1 > Num2) {
-//     alert(" Ther Greater Of " + Num1 + " And " + Num2 + " Is " + Num1 + " is Greater");
-// } else if (Num1 < Num2) {
-//     alert(" Ther Greater Of " + Num1 + " And " + Num2 + " Is " + Num2 + " is Greater");
-// } else if (Num1 === Num2) {
-//     alert(Num1 + " Is Equal To " + Num2);
-// }
-
-
-//.....................Q21.......................
-
-// var lang = prompt("Enter Language Code i.e en , ur , fr . To print HELLO WORLD in the desired language");
-
-// if (lang === "en") {
-//     alert("Hello World");
-// } else if (lang === "ur") {
-//     alert("ہیلو دنیا");
-// } else if (lang === "fr") {
-//     alert("Bonjour le monde");
-// } else {
-//     alert("Invalid Input");
-// }
-
-//.............................Q22....................
-
-
-// var num = +prompt("Enter Number")
-// if (num < 0) {
-//     alert("your number is negative")
-// } else if (num > 0) {
-//     alert("your number is positive");
-// }
-
-
-//...............................Q23........................
-
-
-// var noun = prompt("Enter Noun");
-// var nounNumber = +prompt("Enter Noun's Quantity/Number");
-
-// if (nounNumber === 1) {
-//     alert(nounNumber + " " + noun);
-// } else if (nounNumber > 1) {
-//     alert(nounNumber + " " + noun + "s")
-// } else {
-//     alert("Invalid Input");
-// }
+// let answer15 = question15(n, s);
+// console.log("asnwer", answer15);
